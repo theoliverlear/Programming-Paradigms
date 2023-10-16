@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 // Name: Oliver Sigwarth                                                     |
 // Assignment 1 - Among Us                                                   |
 // Program: Main.java                                                        |
@@ -8,7 +10,7 @@
  * in Among Us and implement methods to interact with those objects.         |
 ----------------------------------------------------------------------------*/
 // Created: 10/12/2023                                                       |
-// Last Modified: 10/12/2023                                                 |
+// Last Modified: 10/16/2023                                                 |
 //----------------------------------------------------------------------------
 public class Main {
  /*
@@ -33,6 +35,16 @@ public class Main {
                                    "O2", 27, true);
         Crewmember dingus = new Crewmember("Dingus", "Green",
                                       "Admin", 64, true);
+        Imposter impostor = new Imposter("Judas", "Gray",
+                                         "Impostor", 100, true);
+
+        // Demonstrate Getters
+        for (Crewmember crewmember : Crewmember.getCrewmembers()) {
+            crewmember.details();
+        }
+        // Demonstrate Setters
+
+        // Demonstrate Methods
 
     }
 }
