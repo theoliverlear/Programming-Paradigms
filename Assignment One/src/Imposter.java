@@ -8,7 +8,7 @@
  * in Among Us and implement methods to interact with those objects.         |
 ----------------------------------------------------------------------------*/
 // Created: 10/12/2023                                                       |
-// Last Modified: 10/16/2023                                                 |
+// Last Modified: 10/18/2023                                                 |
 //----------------------------------------------------------------------------
 public class Imposter extends Crewmember {
     //----------------------------Constructors--------------------------------
@@ -29,9 +29,14 @@ public class Imposter extends Crewmember {
     }
     //------------------------------Methods-----------------------------------
     public void kill(Crewmember crewmember) {
+        // If the imposter is alive and the crewmember they want to kill is
+        // alive, then the imposter can kill the crewmember. The crewmember
+        // is killed by setting their isAlive variable to false and the
+        // numCrewmembers variable is decremented.
         if (crewmember.getIsAlive() && this.getIsAlive()) {
             System.out.println(crewmember.getName() + " has been killed!");
             crewmember.setIsAlive(false);
+            numCrewmembers--;
         }
     }
 }
