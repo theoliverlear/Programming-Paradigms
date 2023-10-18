@@ -1,15 +1,18 @@
 # Program Write-Up Document
 
-[Name]
-[Date]
-[Course]
-[Assignment]
+Oliver Sigwarth
+10-18-2023
+CIDS 235 - Programming Paradigms
+Assignment 1 - Among Us
 
-**Link to working code (e.g., on Replit.co or any other suitable platform)**
+**Link to working code: https://replit.com/join/ediygthgdu-theoliverlear**
 
 ## Explanation
 
-This document serves as a comprehensive write-up for the [Name of Your Program] project. It includes detailed information about the program's structure, design, and testing. The document is intended to provide a clear overview of the project for evaluation purposes.
+This document serves as a comprehensive write-up for the 
+[Name of Your Program] project. It includes detailed information about the 
+program's structure, design, and testing. The document is intended to provide
+a clear overview of the project for evaluation purposes.
 
 ## UML Class Diagram
 
@@ -17,7 +20,9 @@ This document serves as a comprehensive write-up for the [Name of Your Program] 
 
 *Figure 1: UML Class Diagram*
 
-The UML Class Diagram represents the structural design of the program, showing the classes, their attributes, and their relationships. It provides a visual representation of the program's architecture.
+The UML Class Diagram represents the structural design of the program, showing
+the classes, their attributes, and their relationships. It provides a visual
+representation of the program's architecture.
 
 ## Test Class
 
@@ -34,7 +39,9 @@ public class TestProgram {
 
 *Listing 1: Test Program Class*
 
-The Test Program Class (Listing 1) is responsible for testing the functionality of the program. You can find the main method in this class where test cases are executed to validate the correctness of the program.
+The Test Program Class (Listing 1) is responsible for testing the
+functionality of the program. You can find the main method in this class where
+test cases are executed to validate the correctness of the program.
 
 ## Other Classes
 
@@ -81,7 +88,10 @@ public class Class3 {
 
 ## Conclusion
 
-This program write-up document provides an overview of the [Name of Your Program] project, including the UML Class Diagram, the Test Class, and descriptions of other classes. It is intended to facilitate evaluation and understanding of the program's structure and design.
+This program write-up document provides an overview of the 
+[Name of Your Program] project, including the UML Class Diagram, the Test 
+Class, and descriptions of other classes. It is intended to facilitate 
+evaluation and understanding of the program's structure and design.
 
 ## Citations
 
