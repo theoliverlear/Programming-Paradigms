@@ -83,8 +83,8 @@ public class Crewmember {
     public void details() {
         System.out.printf("My name is %s, my color is %s, my task is %s," +
                           " and I am %d years old.\n",
-                          this.name, this.withColor(this.color), this.task,
-                          this.age);
+                          this.withColor(this.name),
+                          this.withColor(this.color), this.task, this.age);
     }
     //
     public String withColor(String phrase) {
@@ -103,5 +103,18 @@ public class Crewmember {
         };
         String coloredPhrase = colorCode + phrase + resetCode;
         return coloredPhrase;
+    }
+    public static void remainingCrewmembers() {
+        System.out.println("The remaining crewmembers are:");
+        for (Crewmember crewmember : crewmembersList) {
+            if (crewmember.getIsAlive()) {
+                System.out.println(crewmember.withColor(
+                                   crewmember.getName()));
+            }
+        }
+//        crewmembersList.stream().filter(Crewmember::getIsAlive)
+//                                .map(crewmember -> crewmember.withColor(
+//                                        crewmember.getName()))
+//                                .forEach(System.out::println);
     }
 }
