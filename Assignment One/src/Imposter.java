@@ -1,6 +1,6 @@
 // Name: Oliver Sigwarth                                                     |
 // Assignment 1 - Among Us                                                   |
-// Program: Main.java                                                        |
+// Program: Imposter.java                                                    |
 // Description:                                                              |
 /*----------------------------------------------------------------------------
  * The goal of this assignment is to practice creating classes and objects.  |
@@ -11,12 +11,20 @@
 // Last Modified: 10/16/2023                                                 |
 //----------------------------------------------------------------------------
 public class Imposter extends Crewmember {
+    //----------------------------Constructors--------------------------------
     public Imposter() {
+        // A default constructor is added for those who may want to play the
+        // game without having custom settings. They can be provided a default
+        // imposter with the settings defined in the parent class. Since it
+        // inherits from the Crewmember class, it uses the super keyword to
+        // call the parent constructor.
         super();
     }
-    //----------------------------Constructors--------------------------------
     public Imposter(String name, String color, String task, int age,
                     boolean isAlive) {
+        // This constructor is used to create an imposter with custom
+        // settings. Since it inherits from the Crewmember class, it uses the
+        // super keyword to call the parent constructor.
         super(name, color, task, age, isAlive);
     }
     //------------------------------Methods-----------------------------------
