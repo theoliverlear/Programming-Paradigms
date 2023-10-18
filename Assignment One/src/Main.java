@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 // Name: Oliver Sigwarth                                                     |
 // Assignment 1 - Among Us                                                   |
 // Program: Main.java                                                        |
@@ -23,6 +21,11 @@ public class Main {
      Dingus	 Green	 Admin	         64
   */
     public static void main(String[] args) {
+        // The following variables are the crewmembers laid out in the table
+        // from the rubric. I'm using the constructor that takes all of the
+        // parameters to instantiate the crewmembers as well as utilizing the
+        // static datafields to keep track of the number of crewmembers and
+        // the amount of crewmembers that are alive.
         Crewmember jimmy = new Crewmember("Jimmy", "Cyan",
                                      "Electrical", 34, true);
         Crewmember steve = new Crewmember("Steve", "Red",
@@ -37,14 +40,24 @@ public class Main {
                                       "Admin", 64, true);
         Imposter impostor = new Imposter("Judas", "Gray",
                                          "Impostor", 100, true);
-
+        String separator = "-".repeat(78);
         // Demonstrate Getters
+        System.out.println(separator);
+        System.out.println("Jimmy's name is: " + jimmy.getName());
+        System.out.println("Steve's color is: " + steve.getColor());
+        System.out.println("Bart's task is: " + bart.getTask());
+        System.out.println("Mike's age is: " + mike.getAge(     ));
+        System.out.println("Jeb is alive: " + jeb.getIsAlive());
+        // Demonstrate Setters
+        System.out.println(separator);
+        jimmy.setTask("Storage");
+        jimmy.details();
+        // Demonstrate Methods
+        System.out.println(separator);
+        impostor.kill(jimmy);
+        System.out.println("Jimmy is alive: " + jimmy.getIsAlive());
         for (Crewmember crewmember : Crewmember.getCrewmembers()) {
             crewmember.details();
         }
-        // Demonstrate Setters
-
-        // Demonstrate Methods
-
     }
 }
