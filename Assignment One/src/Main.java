@@ -46,7 +46,7 @@ public class Main {
         System.out.println("Jimmy's name is: " + jimmy.getName());
         System.out.println("Steve's color is: " + steve.getColor());
         System.out.println("Bart's task is: " + bart.getTask());
-        System.out.println("Mike's age is: " + mike.getAge(     ));
+        System.out.println("Mike's age is: " + mike.getAge());
         System.out.println("Jeb is alive: " + jeb.getIsAlive());
         // Demonstrate Setters
         System.out.println(separator);
