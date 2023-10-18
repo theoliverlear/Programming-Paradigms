@@ -1,6 +1,6 @@
 // Name: Oliver Sigwarth                                                     |
 // Assignment 1 - Among Us                                                   |
-// Program: Main.java                                                        |
+// Program: Crewmember.java                                                  |
 // Description:                                                              |
 /*----------------------------------------------------------------------------
  * The goal of this assignment is to practice creating classes and objects.  |
@@ -10,9 +10,7 @@
 // Created: 10/12/2023                                                       |
 // Last Modified: 10/16/2023                                                 |
 //----------------------------------------------------------------------------
-
 import java.util.ArrayList;
-
 public class Crewmember {
     private String name;
     private String color;
@@ -23,10 +21,16 @@ public class Crewmember {
     private static ArrayList<Crewmember> crewmembersList = new ArrayList<>();
     //----------------------------Constructors--------------------------------
     public Crewmember() {
+        // A default constructor is added for those who may want to play the
+        // game without having custom settings. They can be provided a default
+        // crewmember with the following settings.
         this("John", "red", "carpenter", 10, true);
     }
     public Crewmember(String name, String color, String task, int age,
                       boolean isAlive) {
+        // This constructor is used to create a crewmember with custom
+        // it is also used to keep track of the number of crewmembers and when
+        // called, it adds
         this.name = name;
         this.color = color;
         this.task = task;
@@ -40,8 +44,9 @@ public class Crewmember {
     // during the gameplay. The two setters that are allowed are for the
     // task and isAlive variables.
     //------------------------------Getters-----------------------------------
-    // For the sake of modularity, I'm including getters ands setters for all
-    // of the fields, even though I don't use them in this program.
+    // Getters are allowed for all fields because they are all private and
+    // cannot be accessed outside of the class. Per the rubric, all fields
+    // need to be accessed to demonstrate their functionality, pe
     public String getName() {
         return this.name;
     } // Get
@@ -64,17 +69,12 @@ public class Crewmember {
         return crewmembersList;
 }
     //------------------------------Setters-----------------------------------
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setColor(String color) {
-        this.color = color;
-    }
+    // Setters are only allowed for the fields that may change during the
+    // program. The task may change during the program like in the game. The
+    // isAlive variable may change during the program if the crewmember is
+    // killed by the imposter.
     public void setTask(String task) {
         this.task = task;
-    }
-    public void setAge(int age) {
-        this.age = age;
     }
     public void setIsAlive(boolean isAlive) {
         this.isAlive = isAlive;
@@ -90,7 +90,7 @@ public class Crewmember {
     public String withColor(String phrase) {
         String colorLowered = this.color.toLowerCase();
         final String resetCode = "\u001B[0m";
-        String colorCode = switch (this.color.toLowerCase()) {
+        String colorCode = switch (colorLowered) {
             case "cyan" -> "\u001B[36m";
             case "red" -> "\u001B[31m";
             case "lime" -> "\u001B[32m";
@@ -112,9 +112,5 @@ public class Crewmember {
                                    crewmember.getName()));
             }
         }
-//        crewmembersList.stream().filter(Crewmember::getIsAlive)
-//                                .map(crewmember -> crewmember.withColor(
-//                                        crewmember.getName()))
-//                                .forEach(System.out::println);
     }
 }
