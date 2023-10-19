@@ -1,18 +1,27 @@
 # Program Write-Up Document
 
-Oliver Sigwarth
-10-18-2023
-CIDS 235 - Programming Paradigms
-Assignment 1 - Among Us
+- Oliver Sigwarth
+- 10-19-2023
+- CIDS 235 - Programming Paradigms
+- Assignment 1 - Among Us
 
 **Link to working code: https://replit.com/join/ediygthgdu-theoliverlear**
 
 ## Explanation
 
-This document serves as a comprehensive write-up for the 
-[Name of Your Program] project. It includes detailed information about the 
-program's structure, design, and testing. The document is intended to provide
-a clear overview of the project for evaluation purposes.
+This document shows the code of the **Among Us** program which simulates the
+game Among Us. The program is written in Java and has three distinct classes.
+The first class is the Main class, which contains the main method and is
+responsible for running the program. The second class is the Crewmate class,
+which represents the crewmates in the game. The third class is the Imposter
+class, which represents the imposters in the game. 
+
+## IMPORTANT
+
+For descriptions of the code and the justifications for the design, please
+refer to the comments in the code. The comments are meant to explain the
+functionality of the code and appear in the places where they are most 
+pertinent.
 
 ## UML Class Diagram
 
@@ -20,16 +29,15 @@ a clear overview of the project for evaluation purposes.
 
 *Figure 1: UML Class Diagram*
 
-The UML Class Diagram represents the structural design of the program, showing
-the classes, their attributes, and their relationships. It provides a visual
-representation of the program's architecture.
+The UML diagram shows the structure of each class and their relationships with
+each other. It will show the data fields, methods, and constructors of each
+class. It will also show the inheritance relationships between the classes.
 
-## Test Class
+## The Test Class - Main.java
 
 ```java
 // Test Class
 public class TestProgram {
-
     public static void main(String[] args) {
         // Test the program functionality here
         // Provide test cases and expected outcomes
@@ -39,13 +47,14 @@ public class TestProgram {
 
 *Listing 1: Test Program Class*
 
-The Test Program Class (Listing 1) is responsible for testing the
-functionality of the program. You can find the main method in this class where
-test cases are executed to validate the correctness of the program.
+The test class is meant to show the functionality of the program. It is not a
+representation of the game itself, but rather it has the functionality for the
+game using object-oriented design. You will see many print statements showing
+the methods as well as the modular nature of certain data fields.
 
 ## Other Classes
 
-### Class 1
+### Crewmember.java
 
 ```java
 // Class 1
@@ -54,11 +63,16 @@ public class Class1 {
 }
 ```
 
-*Listing 2: Class 1*
+*Listing 2: Crewmember*
 
-[Provide a brief description of Class 1 and its role in the program.]
+The Crewmember class is responsible for representing the crewmates in the
+game. It has data fields that represent the crewmate's name, color, task, age,
+and whether or not they are alive. It also has methods that allow for the
+program to safely access its appropriate data fields. The class has methods
+which show the details of a Crewmember object, as well as show the remaining
+crewmembers.
 
-### Class 2
+### Imposter.java
 
 ```java
 // Class 2
@@ -67,32 +81,22 @@ public class Class2 {
 }
 ```
 
-*Listing 3: Class 2*
+*Listing 3: Imposter*
 
-[Provide a brief description of Class 2 and its role in the program.]
-
-### Class 3
-
-```java
-// Class 3
-public class Class3 {
-    // Class 3 code
-}
-```
-
-*Listing 4: Class 3*
-
-[Provide a brief description of Class 3 and its role in the program.]
-
-[Repeat this section for each additional class in your program.]
+The Imposter class is responsible for representing the imposters in the game.
+It contains all of the same data fields as the Crewmember class since the 
+class inherits from the Crewmember class. In addition to the same data fields
+and methods, the Imposter class has the unique ability to kill crewmembers, or
+set their isAlive status to false.
 
 ## Conclusion
 
-This program write-up document provides an overview of the 
-[Name of Your Program] project, including the UML Class Diagram, the Test 
-Class, and descriptions of other classes. It is intended to facilitate 
-evaluation and understanding of the program's structure and design.
+This program is a demonstration of the object-oriented design of a game like
+Among Us. It shows the relationships between the classes and how they can
+interact with each other. It also shows the functionality and modularity of
+object-oriented design. This document is meant to share the core information
+about the program and its design.
 
 ## Citations
 
-Include any citations that you might have here. 
+*None*
