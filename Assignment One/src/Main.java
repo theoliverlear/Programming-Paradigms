@@ -20,7 +20,7 @@ public class Main {
             |   |   Mike | Purple |	Communications |  45 |   |
             |   |    Jeb | Yellow |	            O2 |  27 |   |
             |   | Dingus |	Green |	         Admin |  64 |   |
-            |   | Judas  |	 Gray |	      Impostor | 100 |   |
+            |   |  Judas |	 Gray |	      Impostor | 100 |   |
             ------------------------------------------------*/
     //===========================-Main-Method-================================
     public static void main(String[] args) {
