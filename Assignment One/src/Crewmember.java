@@ -8,7 +8,7 @@
  * in Among Us and implement methods to interact with those objects.         |
 ----------------------------------------------------------------------------*/
 // Created: 10/12/2023                                                       |
-// Last Modified: 10/18/2023                                                 |
+// Last Modified: 10/19/2023                                                 |
 //----------------------------------------------------------------------------
 import java.util.ArrayList;
 public class Crewmember {
@@ -93,7 +93,7 @@ public class Crewmember {
                           this.withColor(this.name),
                           this.withColor(this.color), this.task, this.age);
     }
-    //
+    //-----------------------------Color-Text---------------------------------
     public String withColor(String phrase) {
         // This method takes a phrase and colors it based on the color of the
         // crewmember. The colors are based on the ANSI escape codes and they
@@ -114,6 +114,7 @@ public class Crewmember {
         String coloredPhrase = colorCode + phrase + resetCode;
         return coloredPhrase;
     }
+    //--------------------Print-Remaining-Crewmembers-------------------------
     public static void printRemainingCrewmembers() {
         // This method prints the remaining crewmembers. It iterates through
         // the crewmembersList and it will only print if the crewmember
