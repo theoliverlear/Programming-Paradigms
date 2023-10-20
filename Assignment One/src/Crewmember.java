@@ -26,16 +26,17 @@ public class Crewmember {
         // A default constructor is added for those who may want to play the
         // game without having custom settings. They can be provided a default
         // crewmember with the following settings.
-        this("John", "red", "carpenter", 10, true);
+        this("John", "Red", "Carpenter", 10, true);
     }
     public Crewmember(String name, String color, String task, int age,
                       boolean isAlive) {
         // This constructor is used to create a crewmember with custom
-        // it is also used to keep track of the number of crewmembers by
-        // incrementing numCrewmembers when a new crewmember is instantiated.
-        // This constructor adds the crewmember to the crewmembersList to keep
-        // track of them so that the printRemainingCrewmembers() method can
-        // iterate through the list and print the remaining crewmembers.
+        // settings. It is also used to keep track of the number of
+        // crewmembers by incrementing numCrewmembers when a new crewmember is
+        // instantiated. This constructor adds the crewmember to the
+        // crewmembersList to keep track of them so that the
+        // printRemainingCrewmembers() method can iterate through the list and
+        // print the remaining crewmembers.
         this.name = name;
         this.color = color;
         this.task = task;
@@ -51,19 +52,19 @@ public class Crewmember {
     // safely accessible through getters.
     public String getName() {
         return this.name;
-    } // Get
+    }
     public String getColor() {
         return this.color;
-    } // Get
+    }
     public String getTask() {
         return this.task;
-    } // Get & Set
+    }
     public int getAge() {
         return this.age;
-    } // Get
+    }
     public boolean getIsAlive() {
         return this.isAlive;
-    } // Get & Set
+    }
     public static int getNumCrewmembers() {
         return numCrewmembers;
     }
@@ -96,7 +97,7 @@ public class Crewmember {
     //-----------------------------Color-Text---------------------------------
     public String withColor(String phrase) {
         // This method takes a phrase and colors it based on the color of the
-        // crewmember. The colors are based on the ANSI escape codes and they
+        // crewmember. The colors are based on the ANSI color codes and they
         // are assigned based on a switch of the color of the crewmember.
         String colorLowered = this.color.toLowerCase();
         final String resetCode = "\u001B[0m";
