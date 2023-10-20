@@ -25,7 +25,7 @@ pertinent.
 
 ## UML Class Diagram
 
-<img src="./AssignmentOne.png">
+<img src="./AssignmentOne.png" alt="UML Graph">
 
 *Figure 1: UML Class Diagram*
 
@@ -50,17 +50,17 @@ arrows.
 // Last Modified: 10/19/2023                                                 |
 //----------------------------------------------------------------------------
 public class Main {
-            /*-------------------Test-Cases-------------------
-            |   |  Name  |  Color |      Task      | Age |   |
-            |---|--------|--------|----------------|-----|---|
-            |   |  Jimmy |   Cyan |     Electrical |  34 |   |
-            |   |  Steve |    Red |         Medbay |  21 |   |
-            |   |   Bart |   Lime |     Navigation |  25 |   |
-            |   |   Mike | Purple | Communications |  45 |   |
-            |   |    Jeb | Yellow |             O2 |  27 |   |
-            |   | Dingus |  Green |          Admin |  64 |   |
-            |   |  Judas |   Gray |       Impostor | 100 |   |
-            ------------------------------------------------*/
+    /*-------------------Test-Cases-------------------
+    |   |  Name  |  Color |      Task      | Age |   |
+    |---|--------|--------|----------------|-----|---|
+    |   |  Jimmy |   Cyan |     Electrical |  34 |   |
+    |   |  Steve |    Red |         Medbay |  21 |   |
+    |   |   Bart |   Lime |     Navigation |  25 |   |
+    |   |   Mike | Purple | Communications |  45 |   |
+    |   |    Jeb | Yellow |             O2 |  27 |   |
+    |   | Dingus |  Green |          Admin |  64 |   |
+    |   |  Judas |   Gray |       Impostor | 100 |   |
+    ------------------------------------------------*/
     //===========================-Main-Method-================================
     public static void main(String[] args) {
         // The following variables are the crewmembers laid out in the table
@@ -73,19 +73,19 @@ public class Main {
         System.out.println(separator);
         //----------------------Build-Test-Cases------------------------------
         Crewmember jimmy = new Crewmember("Jimmy", "Cyan",
-                                     "Electrical", 34, true);
+                "Electrical", 34, true);
         Crewmember steve = new Crewmember("Steve", "Red",
-                                     "Medbay", 21, true);
+                "Medbay", 21, true);
         Crewmember bart = new Crewmember("Bart", "Lime",
-                                    "Navigation", 25, true);
+                "Navigation", 25, true);
         Crewmember mike = new Crewmember("Mike", "Purple",
-                                    "Communications", 45, true);
+                "Communications", 45, true);
         Crewmember jeb = new Crewmember("Jeb", "Yellow",
-                                   "O2", 27, true);
+                "O2", 27, true);
         Crewmember dingus = new Crewmember("Dingus", "Green",
-                                      "Admin", 64, true);
+                "Admin", 64, true);
         Imposter judas = new Imposter("Judas", "Gray",
-                                         "Impostor", 100, true);
+                "Impostor", 100, true);
         //--------------------Demonstrate-Getters-----------------------------
         System.out.println("Jimmy's name is: " + jimmy.getName());
         System.out.println("Steve's color is: " + steve.getColor());
@@ -95,12 +95,12 @@ public class Main {
         System.out.println("Dingus' task is: " + dingus.getTask());
         System.out.println("Judas' task is: " + judas.getTask());
         System.out.printf("There are %d crewmembers.\n",
-                           Crewmember.getNumCrewmembers());
+                Crewmember.getNumCrewmembers());
         //--------------------Demonstrate-Setters-----------------------------
         System.out.println(separator);
         String newTask = "Storage";
         System.out.println("Changing Jimmy's task from " + jimmy.getTask()
-                         + " to " + newTask + ".");
+                + " to " + newTask + ".");
         jimmy.setTask("Storage");
         jimmy.details();
         //===================-Demonstrate-Methods-============================
@@ -108,9 +108,9 @@ public class Main {
         System.out.println(separator);
         judas.kill(jimmy);
         System.out.println(jimmy.getName() + " is alive: "
-                         + jimmy.getIsAlive());
+                + jimmy.getIsAlive());
         System.out.printf("There are %d crewmembers.\n",
-                           Crewmember.getNumCrewmembers());
+                Crewmember.getNumCrewmembers());
         //-----------------------Details-Method-------------------------------
         System.out.println(separator);
         for (Crewmember crewmember : Crewmember.getCrewmembers()) {
