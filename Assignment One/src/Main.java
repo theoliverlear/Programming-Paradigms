@@ -27,7 +27,7 @@ public class Main {
         // The following variables are the crewmembers laid out in the table
         // from the rubric. I'm using the constructor that takes all of the
         // parameters to instantiate the crewmembers as well as utilizing the
-        // static datafields to keep track of the number of crewmembers and
+        // static data fields to keep track of the number of crewmembers and
         // the amount of crewmembers that are alive.
         //-----------------------Print-Divider--------------------------------
         String separator = "-".repeat(78);
@@ -47,7 +47,6 @@ public class Main {
                                       "Admin", 64, true);
         Imposter judas = new Imposter("Judas", "Gray",
                                          "Impostor", 100, true);
-
         //--------------------Demonstrate-Getters-----------------------------
         System.out.println("Jimmy's name is: " + jimmy.getName());
         System.out.println("Steve's color is: " + steve.getColor());
@@ -60,6 +59,9 @@ public class Main {
                            Crewmember.getNumCrewmembers());
         //--------------------Demonstrate-Setters-----------------------------
         System.out.println(separator);
+        String newTask = "Storage";
+        System.out.println("Changing Jimmy's task from " + jimmy.getTask()
+                         + " to " + newTask + ".");
         jimmy.setTask("Storage");
         jimmy.details();
         //===================-Demonstrate-Methods-============================
