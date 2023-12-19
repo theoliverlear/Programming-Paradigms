@@ -8,13 +8,34 @@
  * utilizes composition and aggregation. The application should consist of   |
  * classes representing tasks, a todo list, and users.                       |
 ----------------------------------------------------------------------------*/
-// Created: 11/6/2023                                                        |
-// Last Modified: 12/14/2023                                                 |
+// Created: 12/10/2023                                                       |
+// Last Modified: 12/15/2023                                                 |
 //----------------------------------------------------------------------------
 public class Main {
     public static void main(String[] args) {
-        /*
-        A user has a todo list and they are the ones who add tasks to the list
-         */
+        //-------------------Demonstrate-Static-Code--------------------------
+        System.out.println("----------Static Code Demonstration---------");
+        // --- Task 1---
+        User staticUser = new User();
+        String taskName = "Clean Computer";
+        String taskDescription = "Clean crumbs out of keyboard";
+        String taskDueDate = "Monday";
+        staticUser.getTodoList().addTask(taskName,
+                                         taskDescription,
+                                         taskDueDate);
+        // --- Task 2---
+        taskName = "Do Homework";
+        taskDescription = "Complete CIDS 235 Assignment 3";
+        taskDueDate = "Friday (or when Dr. T grades it)";
+        staticUser.getTodoList().addTask(taskName,
+                                         taskDescription,
+                                         taskDueDate);
+        staticUser.getTodoList().viewTasks();
+        staticUser.getTodoList().completeTask(taskName);
+        staticUser.getTodoList().viewTasks();
+        //-------------------Demonstrate-Dynamic-Code-------------------------
+        System.out.println("---------Dynamic Code Demonstration---------");
+        User dynamicUser = new User();
+        dynamicUser.userMenu();
     }
 }
